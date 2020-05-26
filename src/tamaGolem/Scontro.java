@@ -1,42 +1,46 @@
 package tamaGolem;
 
-import java.util.ArrayList;
-
 public class Scontro {
 
-	private final static String INSERT_NOME_GIOCATORE = "Inserisci il nome del Giocatore ";
+	public void inizioBattaglia(Giocatore giocatore1, Giocatore giocatore2) {
 
-	private static final int NUM_MAX_TAMAGOLEM = 3;
-	private static final int MAX_VITA_TAMAGOLEM = 100;
-	private static final String INSERT_NOME_GOLEM = "Inserisci il nome del TamaGolem";
+		int i = 0;
+		int j = 0;
+		int end = 0;
+		do {
 
-	public void creaGiocatori() {
-		Giocatore Giocatore1 = new Giocatore(nomeGiocatore(), cresquadraGolem());
-		Giocatore Giocatore2 = new Giocatore(nomeGiocatore(), cresquadraGolem());
-	}
+			giocatore1.Evocazione(i); // evocazione primo Golem
+			giocatore2.Evocazione(j); // evocazione primo Golem
 
-	private static String nomeGiocatore() {
-		return mylib.InputDati.leggiStringaNonVuota(INSERT_NOME_GIOCATORE);
-	}
+			/*
+			 * 
+			 * COMBATTIMENTO DA AGGIUNGERE
+			 * 
+			 * 
+			 */
 
-	private ArrayList<TamaGolem> cresquadraGolem() {
-		for (int i = 0; i < 2; i++) {
+			// CONTORLLO VINCITA
+			if (giocatore1.Evocazione(i).isDie()) {
 
-			cresquadraGolem().add(creaGolem()); // ************
-		}
-		return null;
-	}
+				if (giocatore1.squadraEmpty()) {
+					System.out.println("Il giocatore 2 ha vinto");
+				} else
+					giocatore1.Evocazione(i++); // secondo Golem
 
-	private TamaGolem creaGolem() {
+			}
 
-		TamaGolem Golem = new TamaGolem(nomeGolem(), MAX_VITA_TAMAGOLEM, null); // null a pietre non essendo ancora
-																				// create
+			if (giocatore2.Evocazione(i).isDie()) {
 
-		return Golem;
-	}
+				if (giocatore2.squadraEmpty()) {
+					System.out.println("Il giocatore 2 ha vinto");
+					end = 1;
+				} else
+					giocatore2.Evocazione(i++); // secondo Golem
 
-	private static String nomeGolem() {
-		return mylib.InputDati.leggiStringaNonVuota(INSERT_NOME_GOLEM);
+			}
+
+
+		} while (end != 1);
 	}
 
 }

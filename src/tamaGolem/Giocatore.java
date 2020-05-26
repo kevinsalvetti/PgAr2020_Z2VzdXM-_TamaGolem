@@ -4,49 +4,12 @@ import java.util.ArrayList;
 
 public class Giocatore {
 
-	private static final int NUM_MAX_TAMAGOLEM = 3;
-	
-	private static final int MIN_VITA_TAMAGOLEM = 0;
-	
-	
-
-	int count = 1;  // per tenere conto del numero di Golem nell' inserimento del nome 
-	
 	private String nome;
-	ArrayList<TamaGolem> squadraGolem = new ArrayList<TamaGolem>();
+	private ArrayList<TamaGolem> squadraGolem;
 
-	
-	public Giocatore(String nome, ArrayList<TamaGolem> squadraGolem) {
-		this.nome = nome;
-		this.squadraGolem = squadraGolem;
-	}
-
-	
-	
-
-	
-	
-	
-	
-	
-	
-	
-	
-	public void eliminaTamaMorto() {
-
-		for (int i = 0; i <= NUM_MAX_TAMAGOLEM; i++) {
-
-			if (squadraGolem.get(i).getVita() <= MIN_VITA_TAMAGOLEM) {
-				squadraGolem.remove(i);
-			}
-		}
-	}
-	
-	public boolean perso() {
-		if (squadraGolem.isEmpty()) {
-			return true;
-		} else
-			return false;
+	public Giocatore(String _nome) {
+		this.nome = _nome;
+		this.squadraGolem = new ArrayList<TamaGolem>();
 	}
 
 	public String getNome() {
@@ -57,4 +20,24 @@ public class Giocatore {
 		this.nome = nome;
 	}
 
+	public TamaGolem addSquadra(TamaGolem golem) {
+		squadraGolem.add(golem);
+		return golem;
+	}
+
+	public TamaGolem Evocazione(int i) {
+		return squadraGolem.get(i);
+	}
+
+	public TamaGolem eliminaGolemDie(int i) {
+		return squadraGolem.remove(i);
+	}
+
+	public boolean squadraEmpty() {
+		if (squadraGolem.isEmpty())
+			return true;
+		else
+			return false;
+
+	}
 }
