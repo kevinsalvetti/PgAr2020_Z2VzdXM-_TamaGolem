@@ -1,7 +1,5 @@
 package tamaGolem;
 
-import java.util.ArrayList;
-
 import mylib.*;
 
 public class Main {
@@ -13,11 +11,8 @@ public class Main {
 
 	private final static String[] MAIN_MENU_ITEMS = { "Vai allo scontro" };
 
-	
 	private final static int MAX_VITA_GOLEM = 100; // DA settare
-	
-	
-	private final static int NUM_PIETRE = 5;
+
 	private final static int NUM_TAMAGOLEM = 3;
 
 	public static void main(String[] args) {
@@ -34,23 +29,26 @@ public class Main {
 
 			switch (voceSelezionata) {
 			case 1:
-				// vai allo scontro
-
+				
+				// crea Giocatore
+				
 				Giocatore giocatore1 = new Giocatore("giocatore 1");
-				
-				for (int i = 0; i < 3 ; i++) {
-					giocatore1.addSquadra(new TamaGolem(MAX_VITA_GOLEM, null));	
+
+				for (int i = 0; i < NUM_TAMAGOLEM; i++) {
+					giocatore1.addSquadra(new TamaGolem(MAX_VITA_GOLEM, null)); // cambiare null per le pietre
 				}
-				
+
 				Giocatore giocatore2 = new Giocatore("giocatore 2");
-				for (int i = 0; i < 3 ; i++) {
-					giocatore2.addSquadra(new TamaGolem(MAX_VITA_GOLEM, null));	
+				
+				for (int i = 0; i < NUM_TAMAGOLEM; i++) {
+					giocatore2.addSquadra(new TamaGolem(MAX_VITA_GOLEM, null)); // cambiare null per le pietre
 				}
 				
-				Scontro battaglia = new Scontro(); 
-				
-				battaglia.inizioBattaglia(giocatore1 , giocatore2);
-				
+				// vai allo scontro
+				Scontro battaglia = new Scontro();
+
+				battaglia.inizioBattaglia(giocatore1, giocatore2);
+
 				break;
 			case 0:
 				fine = true;

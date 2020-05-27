@@ -7,6 +7,7 @@ public class Scontro {
 		int i = 0;
 		int j = 0;
 		int end = 0;
+		
 		do {
 
 			giocatore1.Evocazione(i); // evocazione primo Golem
@@ -24,6 +25,7 @@ public class Scontro {
 
 				if (giocatore1.squadraEmpty()) {
 					System.out.println("Il giocatore 2 ha vinto");
+					end = 1;
 				} else
 					giocatore1.Evocazione(i++); // secondo Golem
 
