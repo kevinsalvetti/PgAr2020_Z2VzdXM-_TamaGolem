@@ -13,11 +13,21 @@ public class Pietre {
 	ArrayList<Pietre> pietreTamaGolem;
 
 	public enum Pietra {
-		OXYGEN,
-		HYDROGEN,
-		RADON,
-		CAESIUM,
-		XENON
+		OXYGEN(1),
+		HYDROGEN(2),
+		RADON(3),
+		CAESIUM(4),
+		XENON(5);
+
+		private int value;
+
+		Pietra(int value) {
+			this.value = value;
+		}
+
+		public void exit() {
+			System.exit(value);
+		}
 	}
 
 	public Pietre() {
@@ -25,11 +35,9 @@ public class Pietre {
 		this.pietreTamaGolem = new ArrayList<Pietre>();
 	}
 
-	
-	
 	public Pietre aggiungiPietre() {
 		scortaComune.add();
-		
+
 		return _pietre;
 	}
 
@@ -37,7 +45,6 @@ public class Pietre {
 		return scortaComune.get(i);
 	}
 
-	
 	public String toString() {
 		return String.format(DISPONIBILITA, );
 	}
