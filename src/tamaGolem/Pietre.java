@@ -9,44 +9,76 @@ public class Pietre {
 
 	private final static int NUMERO_PIETRE_TOTALI = 10;
 
-	ArrayList<Pietre> scortaComune;
-	ArrayList<Pietre> pietreTamaGolem;
+	ArrayList<Integer> scortaComune;
+	ArrayList<Integer> pietreTamaGolem;
 
-	public enum Pietra {
-		OXYGEN(1),
-		HYDROGEN(2),
-		RADON(3),
-		CAESIUM(4),
-		XENON(5);
-
-		private int value;
-
-		Pietra(int value) {
-			this.value = value;
-		}
-
-		public void exit() {
-			System.exit(value);
-		}
-	}
+	private int oxygen = 0;
+	private int hydrogen = 0;
+	private int radon = 0;
+	private int caesium = 0;
 
 	public Pietre() {
-		this.scortaComune = new ArrayList<Pietre>();
-		this.pietreTamaGolem = new ArrayList<Pietre>();
+		this.scortaComune = new ArrayList<Integer>();
 	}
 
-	public Pietre aggiungiPietre() {
-		scortaComune.add();
+	public void aggiungiPietreOxygen() {
+		scortaComune.add(oxygen);
 
-		return _pietre;
 	}
 
-	public Pietre sceltaPietre(int i) {
+	public void aggiungiPietreHydrogen() {
+		scortaComune.add(hydrogen);
+
+	}
+
+	public void aggiungiPietreRadon() {
+		scortaComune.add(radon);
+
+	}
+
+	public void aggiungiPietreCaesium() {
+		scortaComune.add(caesium);
+
+	}
+
+	public int getOxygen() {
+		return oxygen;
+	}
+
+	public void setOxygen(int oxygen) {
+		this.oxygen = oxygen;
+	}
+
+	public int getHydrogen() {
+		return hydrogen;
+	}
+
+	public void setHydrogen(int hydrogen) {
+		this.hydrogen = hydrogen;
+	}
+
+	public int getRadon() {
+		return radon;
+	}
+
+	public void setRadon(int radon) {
+		this.radon = radon;
+	}
+
+	public int getCaesium() {
+		return caesium;
+	}
+
+	public void setCaesium(int caesium) {
+		this.caesium = caesium;
+	}
+
+	public int sceltaPietre(int i) {
 		return scortaComune.get(i);
 	}
 
 	public String toString() {
-		return String.format(DISPONIBILITA, );
+		return String.format(DISPONIBILITA);
 	}
 
 }
