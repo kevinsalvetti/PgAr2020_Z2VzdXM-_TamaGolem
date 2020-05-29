@@ -16,10 +16,10 @@ public class Pietre {
 	ArrayList<String> scortaComune;
 	ArrayList<Integer> pietreTamaGolem;
 
-	private int oxygen = 1;
-	private int hydrogen= 2;
-	private int radon  = 3;
-	private int caesium = 4;
+	private int oxygen = 0;
+	private int hydrogen= 1;
+	private int radon  = 2;
+	private int caesium = 3;
 
 
 

@@ -7,6 +7,9 @@ public class Giocatore {
 	private String nome;
 	private ArrayList<TamaGolem> squadraGolem;
 
+	/*
+	 * inserimento dati giocatore
+	 */
 	public Giocatore(String _nome) {
 		this.nome = _nome;
 		this.squadraGolem = new ArrayList<TamaGolem>();

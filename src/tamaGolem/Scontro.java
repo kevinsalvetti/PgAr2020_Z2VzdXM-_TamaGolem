@@ -20,23 +20,18 @@ public class Scontro {
 		do {
 
 			Golem1 = giocatore1.Evocazione(i); // evocazione primo Golem
+						
+			Golem2 = giocatore2.Evocazione(j); // evocazione primo Golem			
 			
-			
-			
-			Golem2 = giocatore2.Evocazione(j); // evocazione primo Golem
-
-			
-			
-			
-			
-			
-			/*
-			 * 
-			 * COMBATTIMENTO DA AGGIUNGERE
-			 * 
-			 * 
-			 */
-
+	
+			//battaglia
+//		if (pietra_giocatore1 > pietra_giocatore2) {
+//				vita_giocatore2 -= pietra_giocatore1;
+//				}
+//				else 
+//					vita_giocatore1 -= pietra_giocatore2;
+//			
+		
 			// CONTORLLO VINCITA
 			if (giocatore1.Evocazione(i).isDie()) {
 

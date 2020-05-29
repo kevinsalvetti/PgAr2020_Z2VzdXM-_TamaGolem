@@ -7,6 +7,9 @@ public class Equilibrio {
 	private final static int MAGGIORE = 3;
 	private final static int MINORE = -3;
 
+	/*
+	 * crea l'algoritmo per la matrice 
+	 */
 	public void creaMatrice() {
 
 		// matrice [i][j];
