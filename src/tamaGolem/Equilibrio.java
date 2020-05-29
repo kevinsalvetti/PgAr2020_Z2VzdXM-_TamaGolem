@@ -26,7 +26,7 @@ public class Equilibrio {
 				} else if (i == 0 && j == 1) {
 					matrice[i][j] = mylib.EstrazioniCasuali.estraiIntero(MINORE, MAGGIORE);
 				} else if (i == 0 && j == 2) {
-					matrice[i][j] = mylib.EstrazioniCasuali.estraiIntero(MINORE, MAGGIORE) - 1;
+					matrice[i][j] = mylib.EstrazioniCasuali.estraiIntero(MINORE, MAGGIORE ) - 1;
 				} else if (i == 0 && j == 3) {
 					matrice[i][j] = (matrice[i][1] + matrice[i][2]) * -1;
 				} else if (i == 1 && j == 0) {
