@@ -5,16 +5,13 @@ import java.util.ArrayList;
 public class TamaGolem {
 
 	private final static int MIN_VITA_GOLEM = 0;
-
-	// private String nome;
+	
+	//private String nome;
 	private int vita;
 	private ArrayList<Integer> pietre;
 
-	/*
-	 * creazione tamagolem
-	 */
-	public TamaGolem(/* String nome, */ int vita, ArrayList<Integer> pietre) {
-		// this.nome = nome;
+	public TamaGolem(/*String nome,*/ int vita, ArrayList<Integer> pietre) {
+		//this.nome = nome;
 		this.vita = vita;
 		this.pietre = pietre;
 	}
@@ -42,9 +39,14 @@ public class TamaGolem {
 	public void setPietre(ArrayList<Integer> pietre) {
 		this.pietre = pietre;
 	}
+	
+	public int arrayPietre(int i) {
+		return pietre.get(i);
+	}
 
 	public boolean isDie() {
 		return (getVita() == MIN_VITA_GOLEM);
 	}
-
+	
+	
 }

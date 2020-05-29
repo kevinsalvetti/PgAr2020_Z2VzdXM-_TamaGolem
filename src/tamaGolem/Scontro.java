@@ -5,33 +5,46 @@ public class Scontro {
 	public void inizioBattaglia(Giocatore giocatore1, Giocatore giocatore2) {
 
 		
-		int i = 0;
-		int j = 0;
+//		int i = 0;
+//		int j = 0;
 		int end = 0;
-		int scelta = 0; 
+		; 
 		
 		Equilibrio equi = new Equilibrio();
 		
-		equi.creaMatrice();
 		
 		TamaGolem Golem1;
 		TamaGolem Golem2;
 		
 		do {
 
-			Golem1 = giocatore1.Evocazione(i); // evocazione primo Golem
-						
-			Golem2 = giocatore2.Evocazione(j); // evocazione primo Golem			
+			Golem1 = giocatore1.Evocazione(i); // evocazione primo Golem giocatore1
+
+			Golem2 = giocatore2.Evocazione(j); // evocazione primo Golem giocatore2
+
+			for ( int h = 0 ; h < 3 ;h++ ) {
+				int i = Golem1.arrayPietre(h); 
+				int j = Golem2.arrayPietre(h);
+				
+			}
 			
-	
-			//battaglia
-//		if (pietra_giocatore1 > pietra_giocatore2) {
-//				vita_giocatore2 -= pietra_giocatore1;
-//				}
-//				else 
-//					vita_giocatore1 -= pietra_giocatore2;
-//			
-		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			/*
+			 * 
+			 * COMBATTIMENTO DA AGGIUNGERE
+			 * 
+			 * 
+			 */
+/*
 			// CONTORLLO VINCITA
 			if (giocatore1.Evocazione(i).isDie()) {
 
@@ -53,7 +66,7 @@ public class Scontro {
 
 			}
 
-
+*/
 		} while (end != 1);
 	}
 

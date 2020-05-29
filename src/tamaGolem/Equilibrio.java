@@ -6,18 +6,29 @@ public class Equilibrio {
 	private final static int DIM_COLONNE = 4;
 	private final static int MAGGIORE = 3;
 	private final static int MINORE = -3;
-
-	/*
-	 * crea l'algoritmo per la matrice 
-	 */
-	public void creaMatrice() {
-
-		// matrice [i][j];
-
-		int matrice[][];
-		matrice = new int[DIM_RIGHE][DIM_COLONNE];
+	
+	int matrice[][] = new int[DIM_RIGHE][DIM_COLONNE];
+	
+	public void Matrice() {
 
 		// ciclo per riempire la matrice
+		creaMatrice(matrice);
+	
+		// ciclo per stampare la matrice
+		stampaMatrice(matrice);
+	}
+
+	
+
+	public int[][] getMatrice() {
+		return matrice;
+	}
+
+	public void setMatrice(int[][] matrice) {
+		this.matrice = matrice;
+	}
+
+	private void creaMatrice(int[][] matrice) {
 		for (int i = 0; i < DIM_COLONNE; i++) {
 			for (int j = 0; j < DIM_RIGHE; j++) {
 				if (i == j) {
@@ -26,7 +37,7 @@ public class Equilibrio {
 				} else if (i == 0 && j == 1) {
 					matrice[i][j] = mylib.EstrazioniCasuali.estraiIntero(MINORE, MAGGIORE);
 				} else if (i == 0 && j == 2) {
-					matrice[i][j] = mylib.EstrazioniCasuali.estraiIntero(MINORE, MAGGIORE ) - 1;
+					matrice[i][j] = mylib.EstrazioniCasuali.estraiIntero(MINORE, MAGGIORE) - 1;
 				} else if (i == 0 && j == 3) {
 					matrice[i][j] = (matrice[i][1] + matrice[i][2]) * -1;
 				} else if (i == 1 && j == 0) {
@@ -51,8 +62,10 @@ public class Equilibrio {
 
 			}
 		}
+		
+	}
 
-		// ciclo per stampare la matrice
+	private void stampaMatrice(int[][] matrice) {
 		for (int i = 0; i < DIM_COLONNE; i++) {
 			for (int j = 0; j < DIM_RIGHE; j++) {
 
@@ -61,5 +74,6 @@ public class Equilibrio {
 			System.out.println("");
 		}
 	}
+	
 	
 }
