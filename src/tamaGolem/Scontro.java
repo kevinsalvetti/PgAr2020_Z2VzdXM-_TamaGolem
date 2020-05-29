@@ -4,10 +4,15 @@ public class Scontro {
 
 	public void inizioBattaglia(Giocatore giocatore1, Giocatore giocatore2) {
 
+		
 		int i = 0;
 		int j = 0;
 		int end = 0;
 		int scelta = 0; 
+		
+		Equilibrio equi = new Equilibrio();
+		
+		equi.creaMatrice();
 		
 		TamaGolem Golem1;
 		TamaGolem Golem2;

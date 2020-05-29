@@ -34,9 +34,7 @@ public class Main {
 			case 1:
 				// Creazione equilibrio
 
-				Equilibrio equi = new Equilibrio();
 				
-				equi.creaMatrice();
 				/*
 				 * 
 				 * 

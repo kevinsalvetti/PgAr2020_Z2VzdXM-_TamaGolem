@@ -8,9 +8,9 @@ public class TamaGolem {
 	
 	//private String nome;
 	private int vita;
-	private ArrayList<Pietre> pietre;
+	private ArrayList<Integer> pietre;
 
-	public TamaGolem(/*String nome,*/ int vita, ArrayList<Pietre> pietre) {
+	public TamaGolem(/*String nome,*/ int vita, ArrayList<Integer> pietre) {
 		//this.nome = nome;
 		this.vita = vita;
 		this.pietre = pietre;
@@ -32,11 +32,11 @@ public class TamaGolem {
 		this.vita = vita;
 	}
 
-	public ArrayList<Pietre> getPietre() {
+	public ArrayList<Integer> getPietre() {
 		return pietre;
 	}
 
-	public void setPietre(ArrayList<Pietre> pietre) {
+	public void setPietre(ArrayList<Integer> pietre) {
 		this.pietre = pietre;
 	}
 

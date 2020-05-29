@@ -14,49 +14,69 @@ public class Pietre {
 	private static final String MESS_ERROR = "ATTENZIONE INPUT NON VALIDO!";
 
 	ArrayList<String> scortaComune;
-	ArrayList<Pietre> pietreTamaGolem;
+	ArrayList<Integer> pietreTamaGolem;
 
-	private Pietre oxygen;
-	private Pietre hydrogen;
-	private Pietre radon;
-	private Pietre caesium;
+	private int oxygen = 1;
+	private int hydrogen= 2;
+	private int radon  = 3;
+	private int caesium = 4;
+
+
 
 	public Pietre() {
 		this.scortaComune = new ArrayList<String>();
-		this.pietreTamaGolem = new ArrayList<Pietre>();
+		this.pietreTamaGolem = new ArrayList<Integer>();
 	}
 
-	public Pietre getOxygen() {
+	
+
+	public int getOxygen() {
 		return oxygen;
 	}
 
-	public void setOxygen(Pietre oxygen) {
+
+
+	public void setOxygen(int oxygen) {
 		this.oxygen = oxygen;
 	}
 
-	public Pietre getHydrogen() {
+
+
+	public int getHydrogen() {
 		return hydrogen;
 	}
 
-	public void setHydrogen(Pietre hydrogen) {
+
+
+	public void setHydrogen(int hydrogen) {
 		this.hydrogen = hydrogen;
 	}
 
-	public Pietre getRadon() {
+
+
+	public int getRadon() {
 		return radon;
 	}
 
-	public void setRadon(Pietre radon) {
+
+
+	public void setRadon(int radon) {
 		this.radon = radon;
 	}
 
-	public Pietre getCaesium() {
+
+
+	public int getCaesium() {
 		return caesium;
 	}
 
-	public void setCaesium(Pietre caesium) {
+
+
+	public void setCaesium(int caesium) {
 		this.caesium = caesium;
 	}
+
+
 
 	public ArrayList<String> addscortaComune() {
 
@@ -76,7 +96,7 @@ public class Pietre {
 		return scortaComune;
 	}
 
-	public ArrayList<Pietre> MenuSceltaPietre() {
+	public ArrayList<Integer> MenuSceltaPietre() {
 
 		System.out.println("\nINSERISCI 3 PIETRE (SCRIVENDO IL NOME DELLE PIETRE)\n");
 		do {
