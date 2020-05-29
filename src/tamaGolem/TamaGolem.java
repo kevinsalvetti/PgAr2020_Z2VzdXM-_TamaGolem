@@ -1,14 +1,16 @@
 package tamaGolem;
 
+import java.util.ArrayList;
+
 public class TamaGolem {
 
 	private final static int MIN_VITA_GOLEM = 0;
 	
 	//private String nome;
 	private int vita;
-	private String[] pietre;
+	private ArrayList<Pietre> pietre;
 
-	public TamaGolem(/*String nome,*/ int vita, String[] pietre) {
+	public TamaGolem(/*String nome,*/ int vita, ArrayList<Pietre> pietre) {
 		//this.nome = nome;
 		this.vita = vita;
 		this.pietre = pietre;
@@ -30,11 +32,11 @@ public class TamaGolem {
 		this.vita = vita;
 	}
 
-	public String[] getPietre() {
+	public ArrayList<Pietre> getPietre() {
 		return pietre;
 	}
 
-	public void setPietre(String[] pietre) {
+	public void setPietre(ArrayList<Pietre> pietre) {
 		this.pietre = pietre;
 	}
 

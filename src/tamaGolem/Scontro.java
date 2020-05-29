@@ -7,12 +7,24 @@ public class Scontro {
 		int i = 0;
 		int j = 0;
 		int end = 0;
+		int scelta = 0; 
+		
+		TamaGolem Golem1;
+		TamaGolem Golem2;
 		
 		do {
 
-			giocatore1.Evocazione(i); // evocazione primo Golem
-			giocatore2.Evocazione(j); // evocazione primo Golem
+			Golem1 = giocatore1.Evocazione(i); // evocazione primo Golem
+			
+			
+			
+			Golem2 = giocatore2.Evocazione(j); // evocazione primo Golem
 
+			
+			
+			
+			
+			
 			/*
 			 * 
 			 * COMBATTIMENTO DA AGGIUNGERE

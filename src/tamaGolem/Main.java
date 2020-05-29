@@ -9,6 +9,10 @@ public class Main {
 	private static final String MESS_ARRIVEDERCI = "Nel nome del padre, del figlio e dello spirito santo\nAndate in pace!";
 	private static final String MESS_ERROR = "ATTENZIONE, SEI STRONZO!";
 
+	private static final int MAX_PIETRE_GOLEM = 3;
+
+	private static final String INSER_PIETRE = "Quale pietre voi inserire nel Golem ?";
+
 	private final static String[] MAIN_MENU_ITEMS = { "Vai allo scontro" };
 
 	private final static int MAX_VITA_GOLEM = 100; // DA settare
@@ -29,31 +33,45 @@ public class Main {
 
 			switch (voceSelezionata) {
 			case 1:
-				
-				// crea Giocatore
-				
-				Giocatore giocatore1 = new Giocatore("giocatore 1");
+				// Creazione equilibrio
 
+				/*
+				 * 
+				 * 
+				 * 
+				 */
+
+				// crea Giocatore
+
+				Giocatore giocatore1 = new Giocatore("giocatore 1");
+				Pietre pietreGiocatore1 = new Pietre();
+				
 				for (int i = 0; i < NUM_TAMAGOLEM; i++) {
-					giocatore1.addSquadra(new TamaGolem(MAX_VITA_GOLEM, null)); // cambiare null per le pietre
+					pietreGiocatore1.MenuScelta();
+					giocatore1.addSquadra(new TamaGolem(MAX_VITA_GOLEM,pietreGiocatore1.pietreTamaGolem )); 
 				}
 
 				Giocatore giocatore2 = new Giocatore("giocatore 2");
+				Pietre pietreGiocatore2 = new Pietre();
 				
 				for (int i = 0; i < NUM_TAMAGOLEM; i++) {
-					giocatore2.addSquadra(new TamaGolem(MAX_VITA_GOLEM, null)); // cambiare null per le pietre
+					pietreGiocatore2.MenuScelta();
+					giocatore2.addSquadra(new TamaGolem(MAX_VITA_GOLEM, pietreGiocatore2.pietreTamaGolem)); 
 				}
-				
+
 				// vai allo scontro
+
 				Scontro battaglia = new Scontro();
 
 				battaglia.inizioBattaglia(giocatore1, giocatore2);
 
 				break;
+
 			case 0:
 				fine = true;
 				System.out.println(MESS_ARRIVEDERCI);
 				break;
+
 			default:
 				System.out.println(MESS_ERROR);
 				break;

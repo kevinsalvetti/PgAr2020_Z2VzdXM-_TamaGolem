@@ -4,72 +4,71 @@ import java.util.ArrayList;
 
 public class Pietre {
 
-	private final static String DESCRIZIONE = "Sono rimaste %d pietre del tipo %s";
-	private final static String DISPONIBILITA = "Scegliere tra le pietre disponibili: %s";
-
-	private final static int NUMERO_PIETRE_TOTALI = 10;
-
+	private final static String INSERT_PIETRE = "Che pietre vuoi inserire ?\n1.Oxygen\n2.Hydrogen\n3.Radon\n4.Caesium";
+	
+	int valorePietra = 0;
+	
 	ArrayList<Integer> scortaComune;
-	ArrayList<Integer> pietreTamaGolem;
+	ArrayList<Pietre> pietreTamaGolem;
 
-	private int oxygen = 0;
-	private int hydrogen = 0;
-	private int radon = 0;
-	private int caesium = 0;
+	private Pietre oxygen ;
+	private Pietre hydrogen ;
+	private Pietre radon ;
+	private Pietre caesium ;
 
 	public Pietre() {
 		this.scortaComune = new ArrayList<Integer>();
 	}
 
 	public void aggiungiPietreOxygen() {
-		scortaComune.add(oxygen);
-
+		pietreTamaGolem.add(oxygen);
+		
 	}
 
 	public void aggiungiPietreHydrogen() {
-		scortaComune.add(hydrogen);
+		pietreTamaGolem.add(hydrogen);
 
 	}
 
 	public void aggiungiPietreRadon() {
-		scortaComune.add(radon);
+		pietreTamaGolem.add(radon);
 
 	}
 
 	public void aggiungiPietreCaesium() {
-		scortaComune.add(caesium);
+		pietreTamaGolem.add(caesium);
 
 	}
 
-	public int getOxygen() {
+	public Pietre getOxygen() {
 		return oxygen;
 	}
 
-	public void setOxygen(int oxygen) {
+	public void setOxygen(Pietre oxygen) {
 		this.oxygen = oxygen;
 	}
 
-	public int getHydrogen() {
+	public Pietre getHydrogen() {
 		return hydrogen;
 	}
 
-	public void setHydrogen(int hydrogen) {
+	public void setHydrogen(Pietre hydrogen) {
 		this.hydrogen = hydrogen;
 	}
 
-	public int getRadon() {
+	public Pietre getRadon() {
 		return radon;
 	}
 
-	public void setRadon(int radon) {
+	public void setRadon(Pietre radon) {
 		this.radon = radon;
 	}
 
-	public int getCaesium() {
+	public Pietre getCaesium() {
 		return caesium;
 	}
 
-	public void setCaesium(int caesium) {
+	public void setCaesium(Pietre caesium) {
 		this.caesium = caesium;
 	}
 
@@ -77,8 +76,35 @@ public class Pietre {
 		return scortaComune.get(i);
 	}
 
-	public String toString() {
-		return String.format(DISPONIBILITA);
+	public void stampaPietre() {
+		scortaComune.toString();
 	}
-
+	
+	
+	public void MenuScelta() {
+		int scelta = 0;
+		System.out.println("quale pietre vuoi inserire ? ");
+		System.out.println("1.Oxygen\n2.Hydrogen\n3.Radon\n4.Caesium");
+		
+		mylib.InputDati.leggiIntero(INSERT_PIETRE, 1, 4);
+		
+		switch(scelta) {
+		case 1:
+			aggiungiPietreOxygen();
+			break;
+		case 2:
+			aggiungiPietreHydrogen();
+			break;
+		case 3:
+			aggiungiPietreRadon();
+			break;
+		case 4:
+			aggiungiPietreCaesium();
+			break;
+		
+			
+		}
+	}
+	
+	
 }
