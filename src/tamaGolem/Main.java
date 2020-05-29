@@ -34,6 +34,9 @@ public class Main {
 			case 1:
 				// Creazione equilibrio
 
+				Equilibrio equi = new Equilibrio();
+				
+				equi.creaMatrice();
 				/*
 				 * 
 				 * 
@@ -44,7 +47,7 @@ public class Main {
 
 				Giocatore giocatore1 = new Giocatore("giocatore 1");
 				Pietre pietreGiocatore1 = new Pietre();
-				
+				pietreGiocatore1.addscortaComune();
 				for (int i = 0; i < NUM_TAMAGOLEM_PER_GIOCATORE ; i++) {
 					int count = i;
 					System.out.println("\nGolem "+ (++count) + " del Giocatore 1\n");

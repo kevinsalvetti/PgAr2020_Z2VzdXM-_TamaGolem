@@ -79,7 +79,6 @@ public class Pietre {
 	public ArrayList<Pietre> MenuSceltaPietre() {
 
 		System.out.println("\nINSERISCI 3 PIETRE (SCRIVENDO IL NOME DELLE PIETRE)\n");
-		addscortaComune();
 		do {
 			System.out.println("LISTA DEGLI ELEMENTI DISPONIBILI\n");
 			System.out.println(scortaComune.toString());
