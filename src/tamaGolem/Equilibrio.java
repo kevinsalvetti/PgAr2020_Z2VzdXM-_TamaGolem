@@ -1,4 +1,5 @@
 package tamaGolem;	
+
 import java.util.Random;	
 
 
@@ -44,6 +45,6 @@ public class Equilibrio {
 		}	
 		System.out.println("");			
 	}	
-
-
+	}
+	
 	}
