@@ -48,5 +48,8 @@ public class TamaGolem {
 		return (getVita() == MIN_VITA_GOLEM);
 	}
 	
+	public void addPietra(int P) {
+		pietre.add(P);
+	}
 	
 }

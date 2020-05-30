@@ -18,8 +18,6 @@ public class Equilibrio {
 		stampaMatrice(matrice);
 	}
 
-	
-
 	public int[][] getMatrice() {
 		return matrice;
 	}

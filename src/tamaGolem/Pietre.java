@@ -96,8 +96,8 @@ public class Pietre {
 		return scortaComune;
 	}
 
-	public ArrayList<Integer> MenuSceltaPietre() {
-
+	public ArrayList<Integer> MenuSceltaPietre(TamaGolem t) {
+		int counter = 0;
 		System.out.println("\nINSERISCI 3 PIETRE (SCRIVENDO IL NOME DELLE PIETRE)\n");
 		do {
 			System.out.println("LISTA DEGLI ELEMENTI DISPONIBILI\n");
@@ -106,20 +106,21 @@ public class Pietre {
 			String voceselezionata = mylib.InputDati.leggiStringa(CHOOSE_OPTIONS);
 
 			switch (voceselezionata) {
+
 			case OXYGEN:
-				pietreTamaGolem.add(oxygen);
+				t.addPietra(oxygen);   //pietreTamaGolem.add(oxygen);
 				scortaComune.remove(OXYGEN);
 				break;
 			case HYDROGEN:
-				pietreTamaGolem.add(hydrogen);
+				t.addPietra(hydrogen);
 				scortaComune.remove(HYDROGEN);
 				break;
 			case RADON:
-				pietreTamaGolem.add(radon);
+				t.addPietra(radon);
 				scortaComune.remove(RADON);
 				break;
 			case CAESIUM:
-				pietreTamaGolem.add(caesium);
+				t.addPietra(caesium);
 				scortaComune.remove(CAESIUM);
 				break;
 			default:
@@ -127,9 +128,10 @@ public class Pietre {
 				break;
 
 			}
-		} while (pietreTamaGolem.size() < MAX_PIETRE_GOLEM);
+			counter++;
+		} while (counter < MAX_PIETRE_GOLEM);
 
-		return pietreTamaGolem;
+		return null; // da cambiare
 	}
 
 }

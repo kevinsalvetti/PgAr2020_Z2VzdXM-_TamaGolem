@@ -5,13 +5,13 @@ public class Scontro {
 	public void inizioBattaglia(Giocatore giocatore1, Giocatore giocatore2) {
 
 		
-//		int i = 0;
-//		int j = 0;
+		int i = 0;
+		int j = 0;
 		int end = 0;
-		; 
+		int ValoreMatrice  ; 
 		
 		Equilibrio equi = new Equilibrio();
-		
+		equi.Matrice();
 		
 		TamaGolem Golem1;
 		TamaGolem Golem2;
@@ -23,10 +23,13 @@ public class Scontro {
 			Golem2 = giocatore2.Evocazione(j); // evocazione primo Golem giocatore2
 
 			for ( int h = 0 ; h < 3 ;h++ ) {
-				int i = Golem1.arrayPietre(h); 
-				int j = Golem2.arrayPietre(h);
-				
+				int valorePietra1 = Golem1.arrayPietre(h); 
+				int valorePietra2 = Golem2.arrayPietre(h);
+			
+				ValoreMatrice = equi.matrice[valorePietra1][valorePietra2];
+				System.out.println("ciao");
 			}
+			
 			
 			
 			
