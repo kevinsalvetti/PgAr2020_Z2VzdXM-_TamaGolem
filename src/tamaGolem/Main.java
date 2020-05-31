@@ -30,7 +30,6 @@ public class Main {
 		System.out.println(MESS_BENVENUTO + "\n\n");
 
 		MyMenu principale = new MyMenu(CHOOSE_OPTIONS, MAIN_MENU_ITEMS);
-		boolean errore = false;
 		boolean fine = false;
 
 		do {
@@ -45,10 +44,12 @@ public class Main {
 
 				addscortaComune(scortaComune);
 
-				Pietre pietreGiocatore1 = new Pietre();
+				
 
 				for (int i = 0; i < NUM_TAMAGOLEM_PER_GIOCATORE; i++) {
-
+					
+					Pietre pietreGiocatore1 = new Pietre();
+					
 					int count = i;
 
 					System.out.println("\nGolem " + (++count) + " del Giocatore 1\n");
@@ -60,10 +61,12 @@ public class Main {
 
 				Giocatore giocatore2 = new Giocatore("giocatore 2");
 
-				Pietre pietreGiocatore2 = new Pietre();
+				
 
 				for (int j = 0; j < NUM_TAMAGOLEM_PER_GIOCATORE; j++) {
-
+					
+					Pietre pietreGiocatore2 = new Pietre();
+					
 					int count = j;
 
 					System.out.println("\nGolem " + (++count) + " del Giocatore 2\n");
@@ -95,6 +98,10 @@ public class Main {
 
 	}
 
+	/*
+	 * aggiunta pietre alla scorta comune dalla quale tutti giiocatori estrarranno 
+	 * le pietre che oreferiscono
+	 */
 	private static void addscortaComune(ArrayList<String> scortaComune) {
 
 		scortaComune.add(OXYGEN);

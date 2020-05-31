@@ -4,6 +4,9 @@ public class Scontro {
 
 	private static final String RIVELAZIONE_EQUILIBRIO = " MATRICE DELLA RIVELAZIONE DELL ' EQUILIBRIO";
 
+	/*
+	 * metodo che gestisce la battaglia
+	 */
 	public void inizioBattaglia(Giocatore giocatore1, Giocatore giocatore2) {
 
 		int i = 0;
@@ -39,7 +42,7 @@ public class Scontro {
 				System.out.println("Golem del giocatore 2 perde " + Math.abs(ValoreMatrice) + "vita");
 
 				if (giocatore1.Evocazione(i).isDie()) {
-
+					
 					giocatore1.eliminaGolemDie(i);
 
 					if (giocatore1.squadraEmpty()) {
@@ -48,12 +51,12 @@ public class Scontro {
 
 						end = 1;
 					} else
-						giocatore1.Evocazione(i++); // secondo Golem
+						giocatore1.Evocazione(i); // secondo Golem
 
 				}
 
 				if (giocatore2.Evocazione(j).isDie()) {
-
+					
 					giocatore2.eliminaGolemDie(j);
 
 					if (giocatore1.squadraEmpty()) {
@@ -62,7 +65,7 @@ public class Scontro {
 						equi.stampaMatrice();
 						end = 1;
 					} else
-						giocatore1.Evocazione(j++); // secondo Golem
+						giocatore1.Evocazione(j); // secondo Golem
 
 				}
 
@@ -71,6 +74,9 @@ public class Scontro {
 		} while (end != 1);
 	}
 
+	/*
+	 * metodo per la stampa della matrice dell'equilibrio
+	 */
 	private void rivelazioneEquilibrio(Equilibrio equi) {
 		// TODO Auto-generated method stub
 		System.out.println(RIVELAZIONE_EQUILIBRIO);

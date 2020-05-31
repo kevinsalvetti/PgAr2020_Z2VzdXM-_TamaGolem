@@ -18,6 +18,9 @@ public class Equilibrio {
 		this.matrice = matrice;
 	}
 
+	/*
+	 * metodo per la creazione della matice di adiacenza per l'equilibrio delle pietre
+	 */
 	public void creaMatrice() {
 		for (int i = 0; i < DIM_COLONNE; i++) {
 			for (int j = 0; j < DIM_RIGHE; j++) {
@@ -72,6 +75,9 @@ public class Equilibrio {
 
 	}
 
+	/*
+	 * metodo per la stampa della matrice 
+	 */
 	public void stampaMatrice() {
 		for (int i = 0; i < DIM_COLONNE; i++) {
 			for (int j = 0; j < DIM_RIGHE; j++) {

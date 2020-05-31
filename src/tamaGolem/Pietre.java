@@ -12,7 +12,7 @@ public class Pietre {
 	private final static String CHOOSE_OPTIONS = "\nChe pietre vuoi inserire -->\t";
 	private final static int MAX_PIETRE_GOLEM = 3;
 	private static final String MESS_ERROR = "ATTENZIONE INPUT NON VALIDO!";
-	private static final String MESS_ERRORE_INSERIMENTO = "ATTENZIONE L' ELEMENTO è ESAURITO SCEGLINE UN' ALTRO";
+	private static final String MESS_ERRORE_INSERIMENTO = "ATTENZIONE L' ELEMENTO ï¿½ ESAURITO SCEGLINE UN' ALTRO";
 
 	ArrayList<Integer> pietreTamaGolem;
 
@@ -57,6 +57,10 @@ public class Pietre {
 		this.caesium = caesium;
 	}
 
+	/*
+	 * metodo che stampa il menu di scelta delle pietre
+	 * per ogni tamagolem di ogni giocatore
+	 */
 	public ArrayList<Integer> MenuSceltaPietre(ArrayList<String> scortaComune) {
 
 		System.out.println("\nINSERISCI 3 PIETRE (SCRIVENDO IL NOME DELLE PIETRE)\n");

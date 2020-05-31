@@ -9,6 +9,9 @@ public class TamaGolem {
 	private int vita;
 	private ArrayList<Integer> pietre;
 
+	/*
+	 * metodo che genera il costruttore del tamagolem
+	 */
 	public TamaGolem(int vita, ArrayList<Integer> pietre) {
 		this.vita = vita;
 		this.pietre = pietre;
