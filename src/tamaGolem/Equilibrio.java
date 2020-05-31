@@ -4,19 +4,11 @@ public class Equilibrio {
 
 	private final static int DIM_RIGHE = 4;
 	private final static int DIM_COLONNE = 4;
+
 	private final static int MAGGIORE = 3;
 	private final static int MINORE = -3;
-	
-	int matrice[][] = new int[DIM_RIGHE][DIM_COLONNE];
-	
-	public void Matrice() {
 
-		// ciclo per riempire la matrice
-		creaMatrice(matrice);
-	
-		// ciclo per stampare la matrice
-		stampaMatrice(matrice);
-	}
+	int matrice[][] = new int[DIM_RIGHE][DIM_COLONNE];
 
 	public int[][] getMatrice() {
 		return matrice;
@@ -26,22 +18,39 @@ public class Equilibrio {
 		this.matrice = matrice;
 	}
 
-	private void creaMatrice(int[][] matrice) {
+	public void creaMatrice() {
 		for (int i = 0; i < DIM_COLONNE; i++) {
 			for (int j = 0; j < DIM_RIGHE; j++) {
 				if (i == j) {
 					matrice[i][j] = 0;
 
 				} else if (i == 0 && j == 1) {
-					matrice[i][j] = mylib.EstrazioniCasuali.estraiIntero(MINORE, MAGGIORE);
+					int num = mylib.NumeriCasuali.estraiIntero(MINORE, MAGGIORE);
+					
+					while (num == 0) {
+						num = mylib.NumeriCasuali.estraiIntero(MINORE, MAGGIORE);
+					}
+					matrice[i][j] = num;
 				} else if (i == 0 && j == 2) {
-					matrice[i][j] = mylib.EstrazioniCasuali.estraiIntero(MINORE, MAGGIORE) - 1;
+					int num = mylib.NumeriCasuali.estraiIntero(MINORE, MAGGIORE) - 1;
+
+					while (num == 0) {
+						num = mylib.NumeriCasuali.estraiIntero(MINORE, MAGGIORE) - 1;
+					}
+					matrice[i][j] = num;
+
 				} else if (i == 0 && j == 3) {
 					matrice[i][j] = (matrice[i][1] + matrice[i][2]) * -1;
 				} else if (i == 1 && j == 0) {
 					matrice[i][j] = -(matrice[0][1]);
 				} else if (i == 1 && j == 2) {
-					matrice[i][j] = mylib.EstrazioniCasuali.estraiIntero(MINORE, MAGGIORE) - 1;
+					int num = mylib.NumeriCasuali.estraiIntero(MINORE, MAGGIORE) - 1;
+
+					while (num == 0) {
+						num = mylib.NumeriCasuali.estraiIntero(MINORE, MAGGIORE) - 1;
+					}
+					matrice[i][j] = num;
+
 				} else if (i == 1 && j == 3) {
 					matrice[i][j] = (matrice[1][0] + matrice[1][2]) * -1;
 				} else if (i == 2 && j == 0) {
@@ -60,10 +69,10 @@ public class Equilibrio {
 
 			}
 		}
-		
+
 	}
 
-	private void stampaMatrice(int[][] matrice) {
+	public void stampaMatrice() {
 		for (int i = 0; i < DIM_COLONNE; i++) {
 			for (int j = 0; j < DIM_RIGHE; j++) {
 
@@ -72,6 +81,5 @@ public class Equilibrio {
 			System.out.println("");
 		}
 	}
-	
-	
+
 }
